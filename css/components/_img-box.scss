@@ -1,0 +1,93 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "sass:math";
+.container {
+  @extend %wrap;
+  display: flex;
+  margin-left: 20%;
+  flex-wrap: wrap;
+
+  @include mix.tablet-styles {
+    display: flex;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.box {
+  position: relative;
+  flex-basis: 33.33%;
+  img {
+    width: 682px;
+  }
+  @include mix.four-k-styles {
+    display: flex;
+    justify-content: flex-end;
+  }
+  @include mix.laptop-l-styles {
+    flex-basis: 33.33%;
+  }
+  @include mix.laptop-m-styles {
+    flex-basis: 33.33%;
+  }
+  @include mix.tablet-styles {
+    flex-basis: 50%;
+  }
+  @include mix.mobile-l-styles {
+    flex-basis: 100%;
+  }
+  @include mix.mobile-m-styles {
+    flex-basis: 100%;
+  }
+  @include mix.mobile-s-styles {
+    flex-basis: 100%;
+  }
+}
+
+.text-hover {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var.$text-color-base;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+
+  p {
+    color: var.$text-color-base;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+}
+
+.box:hover .text-hover {
+  opacity: 1;
+  cursor: pointer;
+
+  &,
+  p {
+    opacity: 1;
+    transform: translateY(0);
+    background-color: var.$background-color-base;
+    color: var.$text-color-gray;
+    font-weight: var.$font-weight-normal;
+    font-size: var.$gutter-base / 1.3;
+    padding: var.$gutter-base 0;
+  }
+
+  p {
+    border-top: 3px solid #a89b9b;
+    border-bottom: 3px solid #a79a9a;
+  }
+}

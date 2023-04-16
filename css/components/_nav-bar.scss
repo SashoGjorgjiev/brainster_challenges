@@ -1,0 +1,103 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "sass:math";
+
+.nav {
+  background-color: var.$background-color-base;
+  width: 20%;
+  padding: var.$gutter-base;
+  padding-right: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include mix.tablet-styles {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    margin-right: 0;
+    padding: 0;
+    border: none;
+  }
+}
+.hamburger {
+  display: none;
+  @include mix.tablet-styles {
+    display: block;
+    margin-left: 20px;
+    border: 1px solid rgb(228, 223, 223);
+    color: lightgray;
+    padding: math.div(var.$gutter-base, 3);
+  }
+}
+.wrapper {
+  padding: var.$gutter-base;
+  @include mix.tablet-styles {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+.logo {
+  padding-top: var.$gutter-base * 2;
+  @include mix.tablet-styles {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+  }
+}
+.nav-bar {
+  ul {
+    padding-top: var.$gutter-base * 3;
+    padding-left: 0;
+    list-style-type: none;
+    color: var.$text-color-base;
+    @include mix.tablet-styles {
+      display: none;
+    }
+  }
+}
+li {
+  padding-top: math.div(var.$gutter-base, 1.5);
+  font-size: math.div(var.$gutter-base, 1.5);
+  color: var.$text-color-base;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  margin-top: var.$gutter-base * 13;
+  padding-left: math.div(var.$gutter-base, 5);
+  @include mix.four-k-styles {
+    display: block;
+  }
+  @include mix.laptop-l-styles {
+    margin-top: var.$gutter-base * 3;
+  }
+  @include mix.tablet-styles {
+    display: none;
+  }
+  @include mix.laptop-m-styles {
+    margin-top: var.$gutter-base * 2;
+  }
+}
+p {
+  margin-bottom: 0;
+}
+span {
+  font-weight: var.$font-weight-bold;
+  background-color: var.$text-color-primary;
+}
+span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

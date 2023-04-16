@@ -1,3 +1,3 @@
-Challenge 05
+Challenge 04
 
-For this challenge we need to create fully responsive web page and added to git-lab.
+For this challenge we need to create fully responsive web page using SASS and FLEX
