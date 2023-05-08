@@ -1,3 +1,3 @@
-Challenge 05
+Challenge 07
 
-For this challenge we need to create fully responsive web page and added to git-lab.
+Ovoj e mojot proekt so popraven collapse menu bidejki na prethodniot praten proekt poradi fixed-top klasata koga se otvarase hamburger menito doagase vrz formata.
