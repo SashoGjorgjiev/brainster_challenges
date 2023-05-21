@@ -1,0 +1,173 @@
+.active {
+  border-left: 3px solid rgb(255, 255, 255);
+  color: white !important;
+}
+.nav-link:hover {
+  color: white;
+}
+/* .bl {
+  border-left: 3px solid rgb(255, 255, 255);
+} */
+/* .carousel .carousel-caption {
+  top: 50%;
+  left: 70%;
+  bottom: unset;
+  right: unset;
+  transform: translate(-50%, -70%);
+} */
+/* .carousel .carousel-caption {
+  top: 50%;
+  left: 70%;
+  bottom: unset;
+  right: unset;
+  transform: translate(-50%, -70%);
+} */
+/* .active {
+  color: white !important;
+} */
+.one {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  bottom: unset;
+  right: unset;
+  transform: translate(-50%, -50%);
+}
+.two {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  bottom: unset;
+  right: unset;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 992px) {
+  #carouselExampleIndicators {
+    height: 700px;
+  }
+
+  #carouselExampleIndicators .carousel-item {
+    height: 100%;
+    overflow: hidden;
+  }
+  .carousel {
+    height: 100%;
+  }
+  .carousel-item {
+    height: 100%;
+  }
+  .carousel-inner {
+    height: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .one {
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    bottom: unset;
+    right: unset;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.paralax {
+  background-image: url("./images/lights.jpg");
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.paralax2 {
+  background: rgba(0, 0, 0, 0.7) url("./images/media.jpg");
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: darken;
+}
+
+.bg-black {
+  background-color: black;
+}
+.parallax-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+}
+/* About page */
+.imgr {
+  margin-top: -40px;
+  z-index: 999999999999;
+  margin-bottom: 40px;
+}
+.imga {
+  margin-bottom: 40px;
+}
+.bg-red {
+  background-color: rgb(255, 0, 0);
+}
+.mb-40 {
+  margin-bottom: 100px;
+}
+.paralax3 {
+  background-image: url("./images/image1.jpg");
+  position: relative;
+  height: 500px;
+  background-attachment: fixed;
+}
+
+.parallax-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 768px) {
+  .imga {
+    margin-bottom: 0px;
+  }
+  .imgr {
+    margin-top: -20px;
+    z-index: 999999999999;
+    margin-bottom: 20px;
+  }
+  .parallax-content {
+    position: absolute;
+    top: 50;
+    left: 50;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+  }
+}
+/* Services Page */
+.bg-gray {
+  background-color: rgb(240, 240, 240);
+}
+.bg-black2 {
+  background-color: rgb(51, 51, 51);
+  cursor: default;
+}
+.btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.btn.btn-block {
+  cursor: default !important;
+}
+
+/* Contact Page */
+.h-red:hover {
+  color: white !important;
+  text-decoration: none;
+  background-color: red;
+}
