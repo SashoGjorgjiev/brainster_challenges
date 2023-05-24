@@ -139,3 +139,21 @@ button.close {
 .fs {
   font-size: 20px;
 }
+
+.check:active {
+  background-color: red;
+  color: white !important;
+}
+.check:hover,
+.check i:hover {
+  background-color: red !important;
+  cursor: pointer;
+}
+.fa-check-circle {
+  position: absolute;
+  top: 40%;
+  right: 5%;
+  bottom: unset;
+  left: unset;
+  transform: translate(-40%, -5%);
+}
