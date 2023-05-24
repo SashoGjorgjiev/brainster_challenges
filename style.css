@@ -157,3 +157,6 @@ button.close {
   left: unset;
   transform: translate(-40%, -5%);
 }
+label:hover {
+  cursor: pointer;
+}
