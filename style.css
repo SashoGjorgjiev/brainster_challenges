@@ -160,3 +160,47 @@ button.close {
 label:hover {
   cursor: pointer;
 }
+h2 {
+  font-size: 45px;
+}
+.card {
+  border-radius: 15px;
+  border-top-left-radius: 15px;
+  transition: all 0.3s;
+  box-shadow: 7px 7px 5px 0px #4a4444bf;
+  padding-bottom: 20px;
+}
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 7px 7px 5px 0px #4a4444bf;
+}
+.card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.img-fit {
+  height: 25vh;
+  object-fit: cover-;
+}
+.card-text {
+  font-size: 20px;
+}
+.text {
+  font-size: 60px !important;
+}
+.ptb {
+  padding-top: 150px !important;
+  padding-bottom: 220px !important;
+}
+::placeholder {
+  font-size: 15px;
+}
+.submit {
+  padding-top: 32px;
+}
+
+optgroup {
+  border-bottom: 1px solid rgb(189, 172, 172) !important;
+  border-radius: 5px;
+}
