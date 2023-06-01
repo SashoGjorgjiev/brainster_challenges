@@ -99,7 +99,7 @@
         </p>
         <div class="row">
           <div class="col-12">
-            <div class="row">
+            <form class="row">
               <div class="col-12 col-md-6">
                 <div>
                   <div class="form-group">
@@ -167,30 +167,41 @@
                 </div>
               </div>
               <div class="col-12 col-md-6">
-                <label class="font-weight-bold">Тип на студент:</label>
-                <select
-                  class="form-control form-control-lg select"
-                  name="option"
-                  id="option"
-                  required
-                  style="height: 55px"
-                >
-                  <option selected disabled>Изберете тип на студент</option>
-                  <div class="list-item">
-                    <option value="marketing">Студенти од маркетинг</option>
+                <label class="font-weight-bolder">Тип на студент:</label>
+                <div class="select-menu">
+                  <div class="select-btn" onclick="toggleOptions()">
+                    <span class="sBtn-text text-dark font-weight-bold">
+                      Изберете тип на студент.
+                    </span>
+                    <i class="fa fa-chevron-down"></i>
                   </div>
-                  <div class="list-item">
-                    <option value="coding ">Студенти од програмирање</option>
-                  </div>
-                  <div class="list-item">
-                    <option value="data-science ">
+                  <ul class="options font-weight-bold pb-2" id="optionsList">
+                    <li
+                      class="option list-unstyled"
+                      onclick="selectOption(this)"
+                    >
+                      Студенти од маркетинг
+                    </li>
+                    <li
+                      class="option list-unstyled"
+                      onclick="selectOption(this)"
+                    >
+                      Студенти од програмирање
+                    </li>
+                    <li
+                      class="option list-unstyled"
+                      onclick="selectOption(this)"
+                    >
                       Студенти од data-science
-                    </option>
-                  </div>
-                  <div class="list-item">
-                    <option value="design ">Студенти од design</option>
-                  </div>
-                </select>
+                    </li>
+                    <li
+                      class="option list-unstyled"
+                      onclick="selectOption(this)"
+                    >
+                      Студенти од дизајн
+                    </li>
+                  </ul>
+                </div>
               </div>
 
               <div class="col-12 col-md-6">
@@ -205,7 +216,7 @@
                   </button>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -241,5 +252,6 @@
       integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
       crossorigin="anonymous"
     ></script>
+    <script src="./index.js"></script>
   </body>
 </html>
