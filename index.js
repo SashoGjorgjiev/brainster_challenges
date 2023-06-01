@@ -45,7 +45,7 @@ function filterDesign() {
   if (document.querySelector("#filter-design").checked) {
     var designCards = document.querySelectorAll(".design");
     designCards.forEach((designCard) => {
-      designCard.style.display = "inline-block";
+      designCard.style.display = "inline-block ";
     });
 
     document.querySelector("#filter-coding").checked = false;
@@ -54,6 +54,7 @@ function filterDesign() {
     showAllCards();
   }
 }
+
 function hideAllCards() {
   var allCards = document.querySelectorAll(".card");
 
@@ -69,3 +70,23 @@ function showAllCards() {
     card.style.display = "inline-block";
   });
 }
+// select and options list
+function toggleOptions() {
+  var optionsList = document.getElementById("optionsList");
+  optionsList.classList.toggle("active");
+}
+
+function selectOption(option) {
+  var selectBtnText = document.querySelector(".sBtn-text");
+  selectBtnText.textContent = option.textContent;
+  toggleOptions();
+}
+
+document.addEventListener("click", function (event) {
+  var selectBtn = document.querySelector(".select-btn");
+  var optionsList = document.getElementById("optionsList");
+
+  if (!selectBtn.contains(event.target)) {
+    optionsList.classList.remove("active");
+  }
+});
