@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .btn-red {
   background-color: red;
 }
@@ -24,9 +29,10 @@
   color: #ff0000 !important;
 }
 
-/* .active {
-  color: #343a40 !important;
-} */
+.active {
+  color: #403834 !important;
+  background-color: red;
+}
 
 .navbar-toggler {
   display: flex;
@@ -173,7 +179,7 @@ h2 {
 .card:hover {
   transform: scale(1.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  box-shadow: 7px 7px 5px 0px #4a4444bf;
+  box-shadow: 7px 7px 5px 0px #474141bf;
 }
 .card-img-top {
   border-top-left-radius: 15px;
@@ -181,7 +187,7 @@ h2 {
 }
 .img-fit {
   height: 25vh;
-  object-fit: cover-;
+  object-fit: cover;
 }
 .card-text {
   font-size: 20px;
@@ -194,13 +200,51 @@ h2 {
   padding-bottom: 220px !important;
 }
 ::placeholder {
-  font-size: 15px;
+  font-size: 20px;
 }
 .submit {
   padding-top: 32px;
 }
-
-optgroup {
-  border-bottom: 1px solid rgb(189, 172, 172) !important;
+/* select */
+.select-menu .select-btn {
+  display: flex;
+  height: 55px;
+  padding: 20px;
   border-radius: 5px;
+  font-size: 20px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #ffff;
+}
+.select-btn i {
+  font-size: 25px;
+}
+.select-menu .options {
+  position: relative;
+  padding: 0 16px;
+  background-color: #ffff;
+  margin-top: 10px;
+  font-size: 22px;
+  border-radius: 5px;
+}
+
+.select-menu .options .option {
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgb(209, 208, 208);
+  cursor: pointer;
+  padding: 10px 16px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.options .option:hover {
+  cursor: pointer;
+  background-color: rgb(223, 218, 218);
+}
+.select-menu .options {
+  display: none;
+}
+
+.select-menu .options.active {
+  display: block;
 }
