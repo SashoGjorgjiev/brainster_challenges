@@ -248,3 +248,26 @@ h2 {
 .select-menu .options.active {
   display: block;
 }
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #fff;
+  }
+}
+
+#typing-text {
+  font-size: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 700px;
+  animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
+}
