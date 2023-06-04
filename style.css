@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .btn-red {
   background-color: red;
 }
@@ -21,14 +26,12 @@
 
 .bg-red:hover {
   background-color: #343a40;
-}
-
-.bg-red:hover {
   color: #ff0000 !important;
 }
 
 .active {
-  color: #343a40 !important;
+  color: #403834 !important;
+  background-color: red;
 }
 
 .navbar-toggler {
@@ -125,7 +128,7 @@ button.close {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
-  height: 550px;
+  height: 600px;
   width: 100%;
   position: relative;
 }
@@ -139,26 +142,109 @@ button.close {
   transform: translate(-50%, -50%);
 }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
+.fs {
+  font-size: 20px;
 }
 
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #fff;
-  }
+.check:active {
+  background-color: red;
+  color: white !important;
+}
+.check:hover,
+.check i:hover {
+  background-color: red !important;
+  cursor: pointer;
+}
+.fa-check-circle {
+  position: absolute;
+  top: 40%;
+  right: 5%;
+  bottom: unset;
+  left: unset;
+  transform: translate(-40%, -5%);
+}
+label:hover {
+  cursor: pointer;
+}
+h2 {
+  font-size: 45px;
+}
+.card {
+  border-radius: 15px;
+  border-top-left-radius: 15px;
+  transition: all 0.3s;
+  box-shadow: 7px 7px 5px 0px #4a4444bf;
+  padding-bottom: 20px;
+}
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 7px 7px 5px 0px #474141bf;
+}
+.card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.img-fit {
+  height: 25vh;
+  object-fit: cover;
+}
+.card-text {
+  font-size: 20px;
+}
+.text {
+  font-size: 60px !important;
+}
+.ptb {
+  padding-top: 150px !important;
+  padding-bottom: 220px !important;
+}
+::placeholder {
+  font-size: 20px;
+}
+.submit {
+  padding-top: 32px;
+}
+/* select */
+.select-menu .select-btn {
+  display: flex;
+  height: 55px;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #ffff;
+}
+.select-btn i {
+  font-size: 25px;
+}
+.select-menu .options {
+  position: relative;
+  padding: 0 16px;
+  background-color: #ffff;
+  margin-top: 10px;
+  font-size: 22px;
+  border-radius: 5px;
 }
 
-#typing-text {
-  font-size: 100px;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 700px;
-  animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
+.select-menu .options .option {
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgb(209, 208, 208);
+  cursor: pointer;
+  padding: 10px 16px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.options .option:hover {
+  cursor: pointer;
+  background-color: rgb(223, 218, 218);
+}
+.select-menu .options {
+  display: none;
+}
+
+.select-menu .options.active {
+  display: block;
 }
