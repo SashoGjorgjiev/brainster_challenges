@@ -275,9 +275,9 @@ h2 {
 }
 
 #typing-text {
-  font-size: 70px;
+  font-size: 100px;
   white-space: nowrap;
   overflow: hidden;
-  width: 600px;
+  width: 700px;
   animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
 }
