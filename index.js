@@ -90,3 +90,19 @@ document.addEventListener("click", function (event) {
     optionsList.classList.remove("active");
   }
 });
+
+const delay = 150;
+
+let charIndex = 0;
+let timer;
+
+function typeText() {
+  if (charIndex < text.length) {
+    document.getElementById("typing-text").textContent +=
+      text.charAt(charIndex);
+    charIndex++;
+    timer = setTimeout(typeText, delay);
+  }
+}
+
+typeText();
