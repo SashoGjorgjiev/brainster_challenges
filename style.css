@@ -248,3 +248,36 @@ h2 {
 .select-menu .options.active {
   display: block;
 }
+
+.hero-banner {
+  background: #000;
+  color: #fff;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  75% {
+    border-color: #fff;
+  }
+}
+
+#typing-text {
+  font-size: 70px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 600px;
+  animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
+}
