@@ -254,20 +254,22 @@ h2 {
   }
 }
 
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
+@media screen and (min-width: 992px) {
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #fff;
+    }
   }
-  50% {
-    border-color: #fff;
-  }
-}
 
-#typing-text {
-  font-size: 100px;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 700px;
-  animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
+  #typing-text {
+    font-size: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
+    width: 700px;
+  }
 }
