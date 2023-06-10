@@ -1,3 +1,11 @@
+// close button
+$(document).ready(function () {
+  $(".close").click(function () {
+    $(".collapse").collapse("hide");
+  });
+});
+
+// filters
 document
   .querySelector("#filter-coding")
   .addEventListener("change", filterCoding);
@@ -50,13 +58,17 @@ function filterDesign() {
 
     document.querySelector("#filter-coding").checked = false;
     document.querySelector("#filter-marketing").checked = false;
+    var cardHide = document.querySelector(".card-hide");
+    if (cardHide) {
+      cardHide.style.display = "none";
+    }
   } else {
     showAllCards();
   }
 }
 
 function hideAllCards() {
-  var allCards = document.querySelectorAll(".card");
+  var allCards = document.querySelectorAll(".card ");
 
   allCards.forEach((card) => {
     card.style.display = "none";
@@ -70,6 +82,20 @@ function showAllCards() {
     card.style.display = "inline-block";
   });
 }
+// active
+const checkElements = document.querySelectorAll(".check");
+
+checkElements.forEach((checkElement) => {
+  checkElement.addEventListener("click", function () {
+    if (!this.classList.contains("active")) {
+      checkElements.forEach((element) => {
+        element.classList.remove("active");
+      });
+      this.classList.add("active");
+    }
+  });
+});
+
 // select and options list
 function toggleOptions() {
   var optionsList = document.getElementById("optionsList");
