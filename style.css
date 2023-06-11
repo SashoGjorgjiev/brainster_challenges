@@ -274,36 +274,36 @@ input::placeholder {
 .select-menu .options.active {
   display: block;
 }
+
+.hero-banner {
+  background: #000;
+  color: #fff;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @keyframes typing {
   from {
     width: 0;
   }
 }
 
-@media screen and (min-width: 992px) {
-  @keyframes blink-caret {
-    from,
-    to {
-      border-color: transparent;
-    }
-    50% {
-      border-color: #fff;
-    }
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
   }
-  .ptb {
-    padding-top: 150px !important;
-    padding-bottom: 220px !important;
-  }
-
-  #typing-text {
-    font-size: 100px;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
-    width: 700px;
+  75% {
+    border-color: #fff;
   }
 }
-footer {
-  margin-bottom: 0;
-  height: 100%;
+
+#typing-text {
+  font-size: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 700px;
+  animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
 }
