@@ -6,9 +6,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $phone = $_POST['number'];
   $studentType = $_POST['student_type'];
 
-  $servername = "127.1.1.0"; // Update with your server IP or hostname
-  $username = "your_username"; // Replace with your database username
-  $password = "your_password"; // Replace with your database password
+  $servername = "127.1.1.0"; 
+  $username = "your_username"; 
+  $password = "your_password"; 
   $dbname = "client_data";
 
   $conn = new mysqli($servername, $username, $password, $dbname);
@@ -33,9 +33,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 
 <?php
-$servername = "127.1.1.0"; // Update with your server IP or hostname
-$username = "your_username"; // Replace with your database username
-$password = "your_password"; // Replace with your database password
+$servername = "127.1.1.0"; 
+$username = "your_username"; 
+$password = "your_password"; 
 $dbname = "client_data";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
