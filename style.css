@@ -92,6 +92,12 @@ button.close {
   input::placeholder {
     font-size: 15px !important;
   }
+  .ptb {
+    padding-top: 15px !important;
+    padding-bottom: 15px
+  ;
+  }
+
 }
 @media screen and (max-width: 426px) {
   .text-md {
@@ -133,6 +139,11 @@ button.close {
     width: 100%;
     background-color: #343a40;
     padding-top: 100px;
+  }
+  .ptb {
+    padding-top: 15px !important;
+    padding-bottom: 15px
+  ;
   }
 }
 .close {
@@ -284,6 +295,17 @@ input::placeholder {
   align-items: center;
 }
 
+  
+
+@media  screen and (min-width:992px){
+  #typing-text {
+    font-size: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 700px;
+    animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
+  }
+  
 @keyframes typing {
   from {
     width: 0;
@@ -300,10 +322,10 @@ input::placeholder {
   }
 }
 
-#typing-text {
-  font-size: 100px;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 700px;
-  animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
+  
+}
+.ptb {
+  padding-top: 150px;
+  padding-bottom: 200px;
+
 }
