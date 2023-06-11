@@ -91,7 +91,7 @@ document.addEventListener("click", function (event) {
   }
 });
 
-const delay = 150; // Delay between each character typing
+const delay = 150; 
 
 let charIndex = 0;
 let timer;
@@ -106,3 +106,13 @@ function typeText() {
 }
 
 typeText();
+// FORM SUBMIT
+
+function submitForm(event) {
+  event.preventDefault();
+
+  const alertMessageDiv = document.getElementById("alertMessage");
+  alertMessageDiv.textContent = "Form submitted successfully!";
+  alertMessageDiv.classList.remove("d-none");
+
+}

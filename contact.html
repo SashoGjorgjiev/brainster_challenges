@@ -92,14 +92,25 @@
       </div>
     </nav>
     <!-- section -->
+
     <main class="bg-warning">
+      <div
+        id="alertMessage"
+        class="font-weight-bold alert alert-success text-center text-uppercase d-none"
+      ></div>
       <div class="container ptb">
         <p class="text-center text h1 pb-5 font-weight-bold">
           Вработи Студенти
         </p>
         <div class="row">
           <div class="col-12">
-            <form class="row">
+            <form
+              class="row"
+              id="myForm"
+              action="clients.php"
+              method="POST"
+              onsubmit="submitForm(event) "
+            >
               <div class="col-12 col-md-6">
                 <div>
                   <div class="form-group">
@@ -217,6 +228,8 @@
                 </div>
               </div>
             </form>
+            <div id="clientsTable"></div>
+
           </div>
         </div>
       </div>
