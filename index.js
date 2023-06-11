@@ -137,8 +137,40 @@ typeText();
 function submitForm(event) {
   event.preventDefault();
 
-  const alertMessageDiv = document.getElementById("alertMessage");
-  alertMessageDiv.textContent = "Form submitted successfully!";
-  alertMessageDiv.classList.remove("d-none");
+  const alertMessageDiv = document.getElementById('alertMessage');
+  const form = document.getElementById('myForm');
+  const nameInput = document.getElementById('name');
+  const companyInput = document.getElementById('company');
+  const emailInput = document.getElementById('email');
+  const numberInput = document.getElementById('number');
 
+  if (
+    nameInput.value === '' ||
+    companyInput.value === '' ||
+    emailInput.value === '' ||
+    numberInput.value === ''
+  ) {
+    alertMessageDiv.textContent = 'Please fill in all the fields!';
+    alertMessageDiv.classList.remove('alert-success');
+    alertMessageDiv.classList.add('alert-danger');
+  } else {
+    alertMessageDiv.textContent = 'Form submitted successfully!';
+    alertMessageDiv.classList.remove('alert-danger');
+    alertMessageDiv.classList.add('alert-success');
+    form.reset();
+  }
+  alertMessageDiv.classList.remove('d-none');
+
+  $(document).ready(function () {
+    $.ajax({
+      url: '/clients.php',
+      method: 'GET',
+      success: function (response) {
+        $('#clientsTable').html(response);
+      },
+      error: function (error) {
+        console.log(error);
+      },
+    });
+  });
 }
