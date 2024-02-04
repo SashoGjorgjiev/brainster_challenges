@@ -19,4 +19,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::get('vehicles', [VehicleController::class, 'index']);
+Route::post('/vehicles', [VehicleController::class, 'store'])->name('vehicles.store');
+Route::put('/vehicles/{vehicle}', [VehicleController::class, 'update'])->name('vehicles.update');
 Route::delete('/vehicles/{id}', [VehicleController::class, 'destroy'])->name('vehicles.destroy');

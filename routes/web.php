@@ -26,10 +26,9 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/dashboard', [DisplayVehiclesController::class, 'index'])->name('dashboard');
+
     Route::get('/vehicles/create', [VehicleController::class, 'create'])->name('vehicles.create');
     Route::get('/vehicles/edit/{id}', [VehicleController::class, 'edit'])->name('vehicles.edit');
-    Route::post('/vehicles', [VehicleController::class, 'store'])->name('vehicles.store');
-    Route::put('/vehicles/{vehicle}', [VehicleController::class, 'update'])->name('vehicles.update');
 });
 
 require __DIR__ . '/auth.php';
